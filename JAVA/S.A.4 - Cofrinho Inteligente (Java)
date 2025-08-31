@@ -1,0 +1,30 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class CofrinhoInteligente {
+    public static void main(String[] args) {
+        // Dica: use ponto como separador decimal (ex.: 2.5)
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite seu nome: ");
+        String nome = sc.nextLine();
+
+        System.out.print("Digite o valor depositado (capital inicial): R$ ");
+        double capital = sc.nextDouble();
+
+        System.out.print("Digite a taxa de juros ao mês (%), ex.: 2 para 2%: ");
+        double taxaPct = sc.nextDouble();
+
+        System.out.print("Digite o tempo em meses: ");
+        double tempo = sc.nextDouble();
+
+        double juros = capital * (taxaPct / 100.0) * tempo;
+        double montante = capital + juros;
+
+        System.out.printf("Olá, %s! Após %.0f meses, seu cofrinho terá R$ %.2f, ", nome, tempo, montante);
+        System.out.printf("sendo R$ %.2f de juros.%n", juros);
+
+        sc.close();
+    }
+}

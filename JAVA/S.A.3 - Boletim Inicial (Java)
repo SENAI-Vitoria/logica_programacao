@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class BoletimInicial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Entrada de dados (texto)
+        System.out.print("Digite seu nome: ");
+        String nome = sc.nextLine();
+
+        System.out.print("Digite seu curso: ");
+        String curso = sc.nextLine();
+
+        // Entrada de dados (números - use ponto como separador decimal)
+        System.out.print("Digite a primeira nota: ");
+        double n1 = sc.nextDouble();
+
+        System.out.print("Digite a segunda nota: ");
+        double n2 = sc.nextDouble();
+
+        System.out.print("Digite a terceira nota: ");
+        double n3 = sc.nextDouble();
+
+        // Operações matemáticas básicas
+        double soma = n1 + n2 + n3;
+        double media = soma / 3;
+
+        // Saída
+        System.out.println("Aluno: " + nome);
+        System.out.println("Curso: " + curso);
+        System.out.printf("Soma das notas: %.2f%n", soma);
+        System.out.printf("Média: %.2f%n", media);
+
+        sc.close();
+    }
+}
