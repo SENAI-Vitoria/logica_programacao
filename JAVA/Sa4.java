@@ -1,7 +1,7 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class CofrinhoInteligente {
+public class Sa4 {
     public static void main(String[] args) {
         // Dica: use ponto como separador decimal (ex.: 2.5)
         Locale.setDefault(Locale.US);
